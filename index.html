@@ -387,10 +387,10 @@ main {
 <body>
 
 <!-- TOP NAV -->
-<nav class="topnav">
+<nav class="topnav" id="topnav">
   <div class="topnav-logo">
     <div class="logo-icon">💰</div>
-    <span>Minhas Finanças<small>Organizadas</small></span>
+    <span>Minhas Finanças<small>OrganizadasTeste</small></span>
   </div>
   <div class="topnav-actions">
     <button class="btn-sheets" onclick="openModal('sheets-modal')">
@@ -400,8 +400,25 @@ main {
       Google Sheets
     </button>
     <div class="avatar">JD</div>
+    <!-- Botão para recolher -->
+    <button class="btn-collapse" onclick="toggleNav()">☰</button>
   </div>
 </nav>
+
+.topnav {
+  height: 60px;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.topnav.collapsed {
+  transform: translateY(-100%); /* desliza para cima e some */
+}
+  
+function toggleNav() {
+  document.getElementById("topnav").classList.toggle("collapsed");
+}
+
+
 
 <!-- MAIN CONTENT -->
 <main>
