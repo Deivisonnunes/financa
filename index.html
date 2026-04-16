@@ -387,21 +387,16 @@ main {
 <body>
 
 <!-- TOP NAV -->
-<nav class="topnav">
-  <div class="topnav-logo">
-    <div class="logo-icon">💰</div>
-    <span>Minhas Finanças<small>OrganizadasTeste</small></span>
-  </div>
-  <div class="topnav-actions">
-    <button class="btn-sheets" onclick="openModal('sheets-modal')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/>
-      </svg>
-      Google Sheets
-    </button>
-    <div class="avatar">JD</div>
-  </div>
-</nav>
+.topnav {
+  height: 60px;              /* altura padrão */
+  transition: height 0.3s;   /* animação suave */
+  overflow: hidden;          /* evita que conteúdo transborde */
+}
+
+.topnav.collapsed {
+  height: 20px;              /* altura reduzida quando recolhido */
+}
+
 
 <!-- MAIN CONTENT -->
 <main>
